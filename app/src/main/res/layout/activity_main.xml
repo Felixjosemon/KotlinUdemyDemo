@@ -9,48 +9,66 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="223dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="81dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="sans-serif"
         android:text="@string/hello_text"
         android:textAlignment="center"
-        android:textSize="100sp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.50" />
 
     <Button
         android:id="@+id/count_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Count"
         android:onClick="countMe"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintVertical_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/toast_button"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:text="Toast"
         android:onClick="toastMe"
-        app:layout_constraintTop_toBottomOf="@+id/count_button"
-        tools:layout_editor_absoluteX="163dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginRight="8dp"
+        app:layout_constraintVertical_bias="0.502"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/random_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:text="Random"
         android:onClick="randomMe"
-        app:layout_constraintTop_toBottomOf="@+id/count_button"
-        tools:layout_editor_absoluteX="163dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintRight_toLeftOf="@+id/toast_button"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/count_button"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>
